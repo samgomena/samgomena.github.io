@@ -1,103 +1,99 @@
 @font-face {
-  font-family: 'CircularStd-Black';
-  src: url('CircularStd-Black.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-   url('CircularStd-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+  font-family: "CircularStd-Black";
+  src: url("CircularStd-Black.woff") format("woff"),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("CircularStd-Black.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
-html, body, .container {
-    /*font-family: 'CircularStd-Black';*/
-    height: 100%;
-    /*line-height: 0.001;*/ /* Not sure why but this muffed everything up*/
+html,
+body,
+#container {
+  height: 100%;
 }
 
 body {
-    font-family: 'CircularStd-Black';
-    /*font-size: 200%;*/
-    overflow-x: hidden;
+  font-family: "CircularStd-Black";
+  /*font-size: 200%;*/
+  overflow-x: hidden;
+}
+
+canvas {
+  position: absolute;
 }
 
 @media only screen and (min-width: 600px) {
-    body {
-        font-family: 'CircularStd-Black';
-        /*font-size: 400%;*/
-        overflow-x: hidden;
-    }
-} 
+  body {
+    font-family: "CircularStd-Black";
+    /*font-size: 400%;*/
+    overflow-x: hidden;
+  }
+}
 
 p {
-    text-align: center;
-    text-shadow: 0px 0px rgba(255, 255, 255, 1);
+  text-align: center;
+  text-shadow: 0px 0px rgba(255, 255, 255, 1);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  text-shadow: 0px 0px rgba(255, 255, 255, 1);
 }
 
 .shadow {
-    text-shadow: 0px 0px rgba(255, 255, 255, 0.75);   
+  text-shadow: 0px 0px rgba(255, 255, 255, 0.75);
 }
 
-.shadow:hover {
-    text-shadow: 0px 0px rgba(255, 255, 255, 1);
+.media-link {
+  color: rgba(36, 41, 46, 1);
 }
 
-.link-github {
-    color: rgba(36, 41, 46, 1);
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .top {
-    font-size: 250%;
+  font-size: 250%;
 }
 
 .bottom {
-    font-size: 650%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+  font-size: 650%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .info {
-    font-size: 90%;
-    margin-top: 10%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
 }
 
 .footer {
-   position: fixed;
-   left: 0;
-   bottom: 50px; /* 50 cuz div's inside it are all messed up otherwise*/
-   width: 100%;
-   color: white;
-   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 50px; /* 50 cuz div's inside it are all messed up otherwise */
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 .left {
-    display: flex;
-    position: absolute;
-    left: 5px;
+  display: flex;
+  position: absolute;
+  left: 5px;
 }
 
 .right {
-    display: flex;
-    position: absolute;
-    right: 5px;
-    cursor: pointer;
+  display: flex;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
 }
 
 .gradient {
-/*    background-color: #2a2a72;
-    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    -webkit-background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    -moz-background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    -o-background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    -ms-background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);*/
-    -webkit-text-fill-color: transparent;
-    -ms-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
 }
