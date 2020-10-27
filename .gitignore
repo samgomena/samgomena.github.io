@@ -1,1 +1,26 @@
-*.DS_Store
+# Ignore everythang
+*
+
+# Except for
+!.gitignore
+!README.md
+!package.json
+!yarn.lock
+!*.html
+!*.ico
+
+!styles/
+!styles/*.css
+!styles/*.ttf
+!styles/*.woff
+
+!scripts/
+!scripts/*.js
+
+!assets/
+!assets/*.ico
+!assets/*.json
+!assets/shaders/
+!assets/shaders/*.fs
+!assets/shaders/*.vs
+

@@ -1,0 +1,25 @@
+{
+  "name": "samgomena.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "scripts/main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samgomena/samgomena.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samgomena/samgomena.github.io/issues"
+  },
+  "homepage": "https://gomena.io",
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}
