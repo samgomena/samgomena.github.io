@@ -17,6 +17,8 @@
 !src/
 !src/**/
 !src/**/*.ts
+!src/**/*.frag
+!src/**/*.vert
 
 !scripts/
 !scripts/*.js
