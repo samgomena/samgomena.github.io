@@ -18,22 +18,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Sam." />
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png" />
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta
-      name="msapplication-TileImage"
-      content="images/touch/ms-touch-icon-144x144-precomposed.png"
-    />
     <meta name="msapplication-TileColor" content="#2F3BA2" />
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#2F3BA2" />
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700"> -->
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
-  <body id="gradient" class="gradient">
-    <div id="container">
+  <body id="gradient">
+    <div id="container" style="background-color: aqua">
       <div>
         <p class="top">
           <a href="/">Hey, I'm</a>
@@ -43,10 +34,10 @@
         </p>
       </div>
       <div>
-        <div>
-          <p class="info shadow">
-            Unfortunately, I've been too busy with school, work, and/or play to
-            make this website any cooler than it already is. Hopefully that will
+        <div style="display: flex; justify-content: center">
+          <p class="text-shadow" style="width: 75%">
+            Unfortunately, I've been too busy with work, school, or play to make
+            this website any cooler than it already is. Hopefully that will
             change soon. In the meantime you can check out my
             <strong class="media-link"
               ><a href="https://github.com/samgomena">github</a></strong
@@ -62,12 +53,12 @@
         </div>
       </div>
       <footer class="footer">
-        <div class="left">
-          <p class="shadow">
+        <div class="flex" style="margin-left: 1rem">
+          <p class="text-shadow">
             <a href="mailto:sam@gomena.io">Contact.</a>
           </p>
           &nbsp;
-          <p class="shadow">
+          <p class="text-shadow">
             <a
               target="blank"
               href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/1zIaaYPsr3UgsZ_igRLzum7R-YP9_byUbcZJq-YdLgvw/export?format=pdf"
@@ -75,15 +66,14 @@
             >
           </p>
         </div>
-        <div class="right">
-          <p id="change_me" class="shadow" title="">Try a different theme?</p>
+        <div class="flex" style="margin-left: auto; margin-right: 1rem">
+          <p id="change_me" class="text-shadow pointer" title="">
+            Try a different theme?
+          </p>
         </div>
       </footer>
     </div>
 
-    <script src="lib/three.min.js"></script>
-    <script src="scripts/sky.js"></script>
-    <script src="scripts/utils.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="src/main.ts"></script>
   </body>
 </html>

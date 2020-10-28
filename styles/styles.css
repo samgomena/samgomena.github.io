@@ -8,7 +8,8 @@
 html,
 body,
 #container {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -39,7 +40,7 @@ a {
   text-shadow: 0px 0px rgba(255, 255, 255, 1);
 }
 
-.shadow {
+.text-shadow {
   text-shadow: 0px 0px rgba(255, 255, 255, 0.75);
 }
 
@@ -74,10 +75,11 @@ a {
 .footer {
   position: fixed;
   left: 0;
-  bottom: 50px; /* 50 cuz div's inside it are all messed up otherwise */
+  bottom: 0px;
   width: 100%;
   color: white;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .left {
@@ -93,7 +95,15 @@ a {
   cursor: pointer;
 }
 
-.gradient {
+#gradient {
   -webkit-text-fill-color: transparent;
   -ms-text-fill-color: transparent;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
 }
