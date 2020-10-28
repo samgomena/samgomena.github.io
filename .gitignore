@@ -4,8 +4,8 @@
 # Except for
 !.gitignore
 !README.md
-!package.json
 !yarn.lock
+!*.json
 !*.html
 !*.ico
 
@@ -13,6 +13,10 @@
 !styles/*.css
 !styles/*.ttf
 !styles/*.woff
+
+!src/
+!src/**/
+!src/**/*.ts
 
 !scripts/
 !scripts/*.js
