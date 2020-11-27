@@ -23,16 +23,6 @@ export function doRandom(min: number, max: number, precision?: number) {
   }
 }
 
-export async function loadShader(name: string) {
-  const raw_vs = await fetch(`assets/shaders/${name}.vs`);
-  const raw_fs = await fetch(`assets/shaders/${name}.fs`);
-
-  const vs = await raw_vs.text();
-  const fs = await raw_fs.text();
-
-  return { vs, fs };
-}
-
 export function clamp(x: number, a: number, b: number) {
   return Math.max(a, Math.min(x, b));
 }
@@ -64,7 +54,9 @@ export function rainbow(numOfSteps: number, step: number) {
   // This function generates vibrant, "evenly spaced" colours (i.e. no clustering). This is ideal for creating easily distinguishable vibrant markers in Google Maps and other apps.
   // Adam Cole, 2011-Sept-14
   // HSV to RBG adapted from: http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript
-  let r, g, b;
+  let r = 0,
+    g = 0,
+    b = 0;
   let h = step / numOfSteps;
   let i = ~~(h * 6);
   let f = h * 6 - i;
