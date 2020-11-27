@@ -20,7 +20,6 @@ function supportsWebGL() {
 }
 
 function loadWebGLBackground() {
-  console.log("wtaf");
   const container = document.getElementById("container");
 
   const scene = new THREE.Scene();
@@ -56,7 +55,4 @@ function loadWebGLBackground() {
   requestAnimationFrame(render);
 }
 
-(() => loadWebGLBackground())();
-// supportsWebGL()
-//   ? loadWebGLBackground()
-//   : console.log("Sorry m8 this browser doesn't support WebGL"))();
+loadWebGLBackground();
