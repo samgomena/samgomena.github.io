@@ -1,8 +1,11 @@
 import * as THREE from "three";
 
-import { loadShader, getRandomBetween, rainbow } from "./utils";
+import { rainbow } from "./utils";
 
+// Ignore for now cuz generating types is hard
+// @ts-ignore
 import skyVert from "./assets/Sky.vert";
+// @ts-ignore
 import skyFrag from "./assets/Sky.frag";
 
 export default class Sky {
@@ -13,12 +16,15 @@ export default class Sky {
     this.group = new THREE.Group();
 
     this.material = this.getShaderMaterial();
+
     const mesh = new THREE.Mesh(geom, this.material);
     this.group.add(mesh);
 
     this.material.uniforms.color.value = new THREE.Color(
       this.generateNewColor()
     );
+
+    // this.material.uniforms.mouse.value.x = window.x;
 
     document.getElementById("change_me")?.addEventListener("click", () => {
       if (this.material) {
@@ -35,6 +41,7 @@ export default class Sky {
       sat: { type: "f", value: 0 },
       color: { type: "c", value: new THREE.Color(0x49beaa) },
       // color: {type: 'c', value: new THREE.Color(0x7F3DBC)}
+      // mouse: { type: "v2", value: new THREE.Vector2() },
     };
 
     // https://threejs.org/docs/#api/en/materials/ShaderMaterial.uniforms
@@ -54,9 +61,13 @@ export default class Sky {
     return rainbow(numberOfSteps, step);
   }
 
+  // onWindowResize() {
+  //   renderer.setSize(window.innerWidth, window.innerHeight);
+  // }
+
   update() {
     if (this.material) {
-      this.material.uniforms.time.value = performance.now() * 0.000003;
+      this.material.uniforms.time.value += 0.00005; //performance.now() * 0.000003;
     }
   }
 }
